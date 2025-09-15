@@ -6,7 +6,7 @@
 FROM node:20.18.1-alpine AS builder
 
 # Build arguments
-ARG BUILD_UI=false
+ARG BUILD_UI=true
 ARG NODE_VERSION=20.18.1
 
 # Install build dependencies for native modules
