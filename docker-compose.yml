@@ -12,7 +12,7 @@ services:
       [
         'sh',
         '-c',
-        'node dist/src/app/index.cjs --mode api --port 3000 --host 0.0.0.0 --agent /app/memAgent/cipher.yml --mcp-transport-type sse',
+        'node dist/src/app/index.cjs --mode ui --port 3000 --host 0.0.0.0 --mode api --port 3001 --host 0.0.0.0 --agent /app/memAgent/cipher.yml --mcp-transport-type streamable-http',
       ]
     volumes:
       - ./memAgent:/app/memAgent:ro
