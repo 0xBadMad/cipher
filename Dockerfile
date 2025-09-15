@@ -30,7 +30,7 @@ RUN pnpm install --frozen-lockfile
 # Copy source and build
 COPY . .
 # Use conditional build based on BUILD_UI arg
-RUN if [ "$BUILD_UI" = "true" ]; then pnpm run build; else pnpm run build:no-ui; fi
+RUN if [ "$BUILD_UI" = "true" ]; then pnpm run build; else pnpm run build:ui; fi
 
 # Clean up and prepare production node_modules
 RUN pnpm prune --prod && \
